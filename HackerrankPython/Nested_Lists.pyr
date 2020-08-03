@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    lcombine = []
+    #lscore = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        lcombine.append([name, score])
+    
+    
+
+
+    
+    lcomb_filter = sorted(list(set([score for name, score in lcombine])))[1]
+   
+    print('\n'.join([a for a,b in sorted(lcombine) if b == lcomb_filter]))
